@@ -27,8 +27,12 @@ export default function Event({ event, events }: { event: TEvent, events: TEvent
         relatedEvent?.classList.add('bg-gray-300/75');
 
         setTimeout(() => {
-            relatedEvent?.classList.remove('bg-gray-300/75');
-        }, 750)
+            relatedEvent?.classList.add('highlighted');
+
+            setTimeout(() => {
+                relatedEvent?.classList.remove('highlighted');
+            }, 750);
+        }, 100);
     }
 
     return (

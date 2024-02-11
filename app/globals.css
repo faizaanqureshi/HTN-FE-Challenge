@@ -11,3 +11,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.highlighted {
+  background-color: rgba(128, 128, 128, 0.5);
+}
