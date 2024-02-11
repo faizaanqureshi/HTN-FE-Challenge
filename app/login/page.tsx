@@ -15,7 +15,7 @@ export default function Login() {
         redirect("/")
     }
 
-    const handleLogin = (e) => {
+    const handleLogin = (e: any) => {
         e.preventDefault();
         const success = login(email, password);
         if (success) {
