@@ -24,10 +24,10 @@ export default function Event({ event, events }: { event: TEvent, events: TEvent
     function scrollToEvent(id: string) {
         const relatedEvent = document.getElementById(id);
         relatedEvent?.scrollIntoView({ behavior: 'smooth' })
-        relatedEvent?.classList.add('bg-gray-300/60');
+        relatedEvent?.classList.add('bg-gray-300/75');
 
         setTimeout(() => {
-            relatedEvent?.classList.remove('bg-gray-300/60');
+            relatedEvent?.classList.remove('bg-gray-300/75');
         }, 750)
     }
 
@@ -61,7 +61,7 @@ export default function Event({ event, events }: { event: TEvent, events: TEvent
                     <div className="collapse-content">
                         {relatedEvents.map((relatedEvent: TEvent) => {
                             if ((relatedEvent.permission === "private" && isLoggedIn) || (relatedEvent.permission === "public")) {
-                                return <div onClick={() => scrollToEvent(relatedEvent.id.toString())} style={{ cursor: 'pointer' }} className="badge badge-neutral font-semibold me-2">{relatedEvent.name}</div>
+                                return <div key={relatedEvent.id} onClick={() => scrollToEvent(relatedEvent.id.toString())} style={{ cursor: 'pointer' }} className="badge badge-neutral font-semibold me-2">{relatedEvent.name}</div>
                             }
                         })}
                     </div>

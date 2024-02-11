@@ -11,7 +11,7 @@ export default async function Home() {
     <main className="flex min-h-screen flex-col items-center p-4">
       <Navbar />
       {events.map((e: TEvent) => {
-        return <Event event={e} events={events} />
+        return <Event key={e.id} event={e} events={events} />
       })}
     </main>
   );
