@@ -65,7 +65,7 @@ export default function Event({ event, events }: { event: TEvent, events: TEvent
                     <div className="collapse-content">
                         {relatedEvents.map((relatedEvent: TEvent) => {
                             if ((relatedEvent.permission === "private" && isLoggedIn) || (relatedEvent.permission === "public")) {
-                                return <div key={relatedEvent.id} onClick={() => scrollToEvent(relatedEvent.id.toString())} style={{ cursor: 'pointer' }} className="badge badge-neutral font-semibold me-2">{relatedEvent.name}</div>
+                                return <div key={relatedEvent.id} onClick={() => scrollToEvent(relatedEvent.id.toString())} style={{ cursor: 'pointer' }} className="truncate badge badge-neutral font-semibold me-2">{relatedEvent.name}</div>
                             }
                         })}
                     </div>
