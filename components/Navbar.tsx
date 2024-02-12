@@ -30,11 +30,11 @@ export default function Navbar() {
                         Sign Out
                     </button>
                 ) : (
-                    <button className="btn btn-ghost">
-                        <Link href="/login">
+                    <Link href="/login">
+                        <button className="btn btn-ghost">
                             Log In
-                        </Link>
-                    </button>
+                        </button>
+                    </Link>
                 )}
             </div>
         </div>
